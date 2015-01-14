@@ -1,6 +1,6 @@
 {
   "name": "ember-lightning",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ember lightning hosting for https://github.com/LevelbossMike/ember-deploy",
   "main": "index.js",
   "scripts": {
