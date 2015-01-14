@@ -17,7 +17,7 @@ client.auth(process.env.REDIS_SECRET);
 app.use(router(app));
 
 app.get('/', function* (next) {
-  console.log(process.env.APP_NAME);
+
   var current = yield dbCo.get(process.env.APP_NAME +':current');
   var index = yield dbCo.get(current);
 

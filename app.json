@@ -22,7 +22,7 @@
     },
     "REDIS_HOST": {
       "description": "Redis host.",
-      "value": "eu-west-1"
+      "value": ""
     },
     "REDIS_SECRET": {
       "description": "Redis secret.",
