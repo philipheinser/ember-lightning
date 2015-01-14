@@ -1,0 +1,37 @@
+{
+  "name": "ember-lightning",
+  "version": "0.0.1",
+  "description": "Ember lightning hosting for https://github.com/LevelbossMike/ember-deploy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philipheinser/ember-lightning.git"
+  },
+  "keywords": [
+    "ember",
+    "lightning",
+    "hosting",
+    "server",
+    "deploy"
+  ],
+  "author": "Philip Heinser <philipheinser@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philipheinser/ember-lightning/issues"
+  },
+  "homepage": "https://github.com/philipheinser/ember-lightning",
+  "dependencies": {
+    "co-redis": "^1.1.1",
+    "hiredis": "^0.1.17",
+    "koa": "^0.14.0",
+    "koa-router": "^3.8.0",
+    "redis": "^0.12.1"
+  },
+  "engines": {
+    "node": "0.11.x"
+  }
+}

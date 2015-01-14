@@ -1,0 +1,32 @@
+{
+  "name": "ember-lightning",
+  "description": "Ember lightning hosting for https://github.com/LevelbossMike/ember-deploy",
+  "keywords": [
+    "ember",
+    "lightning",
+    "hosting",
+    "deploy"
+  ],
+  "website": "http://philipheinser.ninja/",
+  "addons": [
+    "papertrail:choklad"
+  ],
+  "env": {
+    "APP_NAME": {
+      "description": "Name of your emberjs app.",
+      "value": ""
+    },
+    "REDIS_PORT": {
+      "description": "Redis port.",
+      "value": ""
+    },
+    "REDIS_HOST": {
+      "description": "Redis host.",
+      "value": "eu-west-1"
+    },
+    "REDIS_SECRET": {
+      "description": "Redis secret.",
+      "value": ""
+    }
+  }
+}
