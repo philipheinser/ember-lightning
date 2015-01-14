@@ -2,7 +2,6 @@
 
 var redis = require('redis'),
     coRedis = require('co-redis'),
-    router = require('koa-router'),
     koa = require('koa');
 
 var app = koa(),
@@ -14,9 +13,8 @@ var app = koa(),
 
 client.auth(process.env.REDIS_SECRET);
 
-app.use(router(app));
 
-app.get('/', function* (next) {
+app.use(function* () {
 
   var current = yield dbCo.get(process.env.APP_NAME +':current');
   var index = yield dbCo.get(current);

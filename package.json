@@ -28,7 +28,6 @@
     "co-redis": "^1.1.1",
     "hiredis": "^0.1.17",
     "koa": "^0.14.0",
-    "koa-router": "^3.8.0",
     "redis": "^0.12.1"
   },
   "engines": {
