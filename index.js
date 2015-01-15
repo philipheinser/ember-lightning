@@ -16,7 +16,13 @@ client.auth(process.env.REDIS_SECRET);
 
 app.use(function* () {
 
-  var current = yield dbCo.get(process.env.APP_NAME +':current');
+  var indexkey;
+
+  if (request.query.index_key) {
+    indexkey = process.env.APP_NAME +':'+request.query.index_key;
+  } else {
+    indexkey = yield dbCo.get(process.env.APP_NAME +':current');
+  }
   var index = yield dbCo.get(current);
 
   this.body = index || '';
