@@ -18,8 +18,8 @@ app.use(function* () {
 
   var indexkey;
 
-  if (request.query.index_key) {
-    indexkey = process.env.APP_NAME +':'+request.query.index_key;
+  if (this.request.query.index_key) {
+    indexkey = process.env.APP_NAME +':'+this.request.query.index_key;
   } else {
     indexkey = yield dbCo.get(process.env.APP_NAME +':current');
   }
