@@ -12,6 +12,9 @@
     "papertrail:choklad"
   ],
   "env": {
+    "NODE_ENV": {
+        "value": "production"
+      },
     "APP_NAME": {
       "description": "Name of your emberjs app.",
       "value": ""
