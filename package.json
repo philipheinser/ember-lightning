@@ -1,6 +1,6 @@
 {
   "name": "ember-lightning",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Ember lightning hosting for https://github.com/LevelbossMike/ember-deploy",
   "main": "index.js",
   "scripts": {
@@ -26,11 +26,11 @@
   "homepage": "https://github.com/philipheinser/ember-lightning",
   "dependencies": {
     "co-redis": "^1.1.1",
-    "hiredis": "^0.1.17",
-    "koa": "^0.14.0",
+    "hiredis": "^0.2.0",
+    "koa": "^0.18.0",
     "redis": "^0.12.1"
   },
   "engines": {
-    "node": "0.11.x"
+    "node": "0.12.x"
   }
 }
