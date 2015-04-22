@@ -1,13 +1,13 @@
 {
   "name": "ember-lightning",
-  "description": "Ember lightning hosting for https://github.com/LevelbossMike/ember-deploy",
+  "description": "Ember lightning hosting",
   "keywords": [
     "ember",
     "lightning",
     "hosting",
     "deploy"
   ],
-  "website": "http://philipheinser.ninja/",
+  "website": "http://chat.pixelhandler.com/",
   "addons": [
     "papertrail:choklad"
   ],
@@ -17,19 +17,15 @@
     },
     "APP_NAME": {
       "description": "Name of your emberjs app.",
-      "value": ""
+      "value": "chat-app"
     },
     "REDIS_PORT": {
       "description": "Redis port.",
-      "value": ""
+      "value": "6379"
     },
     "REDIS_HOST": {
       "description": "Redis host.",
-      "value": ""
-    },
-    "REDIS_SECRET": {
-      "description": "Redis secret.",
-      "value": ""
+      "value": "127.0.0.1"
     }
   }
 }

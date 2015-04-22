@@ -1,15 +1,15 @@
 {
   "name": "ember-lightning",
   "version": "0.0.5",
-  "description": "Ember lightning hosting for https://github.com/LevelbossMike/ember-deploy",
+  "description": "Ember lightning hosting",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony index.js",
+    "start": "source .apprc && nvm run 0.12.2 index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/philipheinser/ember-lightning.git"
+    "url": "https://github.com/Ember-SC/ember-lightning.git"
   },
   "keywords": [
     "ember",
@@ -21,9 +21,9 @@
   "author": "Philip Heinser <philipheinser@me.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/philipheinser/ember-lightning/issues"
+    "url": "https://github.com/Ember-SC/ember-lightning/issues"
   },
-  "homepage": "https://github.com/philipheinser/ember-lightning",
+  "homepage": "https://github.com/Ember-SC/ember-lightning",
   "dependencies": {
     "co-redis": "^1.1.1",
     "hiredis": "^0.2.0",
