@@ -19,9 +19,13 @@
       "description": "Name of your emberjs app.",
       "value": "chat-app"
     },
+    "APP_PORT": {
+      "description": "The port the app runs on",
+      "value": 8000
+    },
     "REDIS_PORT": {
       "description": "Redis port.",
-      "value": "6379"
+      "value": 6379
     },
     "REDIS_HOST": {
       "description": "Redis host.",
