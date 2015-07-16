@@ -11,7 +11,9 @@ var app = koa(),
     ),
     dbCo = coRedis(client);
 
-client.auth(process.env.REDIS_SECRET);
+if (process.env.REDIS_SECRET) {
+  client.auth(process.env.REDIS_SECRET);
+}
 
 
 app.use(function* () {
