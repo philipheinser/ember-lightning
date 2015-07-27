@@ -15,6 +15,9 @@ if (process.env.REDIS_SECRET) {
   client.auth(process.env.REDIS_SECRET);
 }
 
+client.on('error', function (err) {
+  console.log('Redis client error: ' + err);
+});
 
 app.use(function* () {
 
