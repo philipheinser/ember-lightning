@@ -1,12 +1,10 @@
-FROM node:0.12
+FROM node:0.12-onbuild
 
-COPY . /ember-lightning
-WORKDIR /ember-lightning
-RUN npm install
 EXPOSE 3000
 
+ENV APP_NAME ""
 ENV REDIS_PORT 6379
 ENV REDIS_HOST redis
 ENV REDIS_SECRET ""
 
-ENTRYPOINT node --harmony index.js
+CMD [ "node", "--harmony", "index.js" ]
