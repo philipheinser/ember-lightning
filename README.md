@@ -23,7 +23,7 @@ The image responds to these environment variables:
 
 The name of the application as deployed in Redis.
 
-### `REDIS_SERVER`
+### `REDIS_HOST`
 
 The hostname of the Redis server where ember-cli applications are deployed.
 This default to `redis` and so it is also possible to use Docker container
