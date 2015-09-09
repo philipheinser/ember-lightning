@@ -14,7 +14,7 @@ docker build --tag ember-lightning .
 Then, to serve an ember-cli application run the container:
 
 ```shell
-docker run --name $APP_NAME --env APP_NAME=$APP_NAME --env REDIS_SERVER=your-redis-server.example.com ember-lightning:latest
+docker run --name $APP_NAME --env APP_NAME=$APP_NAME --env REDIS_HOST=your-redis-server.example.com ember-lightning:latest
 ```
 
 The image responds to these environment variables:
