@@ -1,4 +1,4 @@
-# ember-lightning ![travis](https://travis-ci.org/philipheinser/ember-lightning.svg?branch=master)
+# ember-lightning ![travis](https://travis-ci.org/philipheinser/ember-lightning.svg?branch=master) ![npm](https://badge.fury.io/js/ember-lightning.svg)
 Ember lightning hosting for https://github.com/ember-cli/ember-cli-deploy
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/philipheinser/ember-lightning)
