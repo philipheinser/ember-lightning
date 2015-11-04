@@ -27,6 +27,7 @@ app.use(function* () {
     indexkey = process.env.APP_NAME +':'+ this.request.query.index_key;
   } else {
     indexkey = yield dbCo.get(process.env.APP_NAME +':current');
+    indexkey = process.env.APP_NAME + ':' + indexkey;
   }
   var index = yield dbCo.get(indexkey);
 
