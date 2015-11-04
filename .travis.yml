@@ -3,3 +3,5 @@ node_js:
   - "4.2"
 services:
   - redis-server
+env:
+  - CC=clang CXX=clang++ npm_config_clang=1
