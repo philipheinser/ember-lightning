@@ -1,10 +1,11 @@
 'use strict';
 
-var redis = require('redis'),
+const redis = require('redis'),
+    co = require('co'),
     coRedis = require('co-redis'),
-    koa = require('koa');
+    Koa = require('koa');
 
-var app = koa(),
+const app = exports.app = new Koa(),
     client  = redis.createClient(
       process.env.REDIS_PORT,
       process.env.REDIS_HOST
@@ -19,12 +20,12 @@ client.on('error', function (err) {
   console.log('Redis client error: ' + err);
 });
 
-app.use(function* () {
+app.use(co.wrap(function* (ctx) {
 
   var indexkey;
 
-  if (this.request.query.index_key) {
-    indexkey = process.env.APP_NAME +':'+ this.request.query.index_key;
+  if (ctx.request.query.index_key) {
+    indexkey = process.env.APP_NAME +':'+ ctx.request.query.index_key;
   } else {
     indexkey = yield dbCo.get(process.env.APP_NAME +':current');
     indexkey = process.env.APP_NAME + ':' + indexkey;
@@ -32,10 +33,10 @@ app.use(function* () {
   var index = yield dbCo.get(indexkey);
 
   if (index) {
-    this.body = index;
+    ctx.body = index;
   } else {
-    this.status = 404;
+    ctx.status = 404;
   }
-});
+}));
 
 app.listen(process.env.PORT || 3000);

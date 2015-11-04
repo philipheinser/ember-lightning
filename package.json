@@ -1,11 +1,11 @@
 {
   "name": "ember-lightning",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ember lightning hosting for https://github.com/LevelbossMike/ember-deploy",
   "main": "index.js",
   "scripts": {
     "start": "node --harmony index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --harmony --full-trace test.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/philipheinser/ember-lightning",
   "dependencies": {
+    "co": "^4.6.0",
     "co-redis": "^2.0.0",
     "hiredis": "^0.4.1",
     "koa": "^2.0.0-alpha.2",
@@ -32,5 +33,13 @@
   },
   "engines": {
     "node": "4.2.x"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "co-supertest": "0.0.10",
+    "mocha": "^2.3.3",
+    "should": "^7.1.1",
+    "supertest": "^1.1.0",
+    "supertest-koa-agent": "^0.2.1"
   }
 }
