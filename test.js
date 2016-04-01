@@ -21,6 +21,7 @@ beforeEach(function() {
 
   return co(function*() {
     yield dbCo.set('test:current', '12345');
+    yield dbCo.set('test:current-content', 'Hello, World');
     yield dbCo.set('test:12345', 'Hello, World');
     yield dbCo.set('test:67890', 'Hello, index_key');
   });
