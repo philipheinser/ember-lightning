@@ -27,13 +27,14 @@ app.use(co.wrap(function* (ctx) {
   if (ctx.request.query.index_key) {
     indexkey = process.env.APP_NAME +':'+ ctx.request.query.index_key;
   } else {
-    indexkey = process.env.APP_NAME +':current-content';
+    indexkey = process.env.APP_NAME +':index:current-content';
   }
   var index = yield dbCo.get(indexkey);
 
   if (index) {
     ctx.body = index;
   } else {
+    console.log(ctx);
     ctx.status = 404;
   }
 }));
