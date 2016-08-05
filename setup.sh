@@ -9,6 +9,13 @@ echo "Okay.  Let's start up our ember-lightning server in Docker"
 echo "What is REDIS HOST"
 echo $1
 
-(sudo docker build --rm --tag ember-lightning . && sudo docker run -d --restart=always -p 3700:3700 --name ember-lightning --env PORT=3700 --env APP_NAME=company-admin --env REDIS_HOST=$1 ember-lightning:latest ) 
+if [[ $2 == "staging" ]]
+then
+  appname="company-admin_staging"
+else
+  appname="company-admin"
+fi
+
+(sudo docker build --rm --tag ember-lightning . && sudo docker run -d --restart=always -p 3700:3700 --name ember-lightning --env PORT=3700 --env APP_NAME=$appname --env REDIS_HOST=$1 ember-lightning:latest ) 
 
 exit 0;
