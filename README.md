@@ -38,3 +38,8 @@ set if Redis is listening on a non-default port.
 
 The shared secret to use for authenticating to Redis. It is blank by default,
 which disables authentication.
+
+### `REDIS_DB`
+
+The database index to `select` in `redis`. It is blank by default, which uses
+the default database.

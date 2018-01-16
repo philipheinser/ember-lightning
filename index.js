@@ -7,7 +7,11 @@ const redis = require('redis'),
 const app = exports.app = new Koa(),
     client  = redis.createClient(
       process.env.REDIS_PORT,
-      process.env.REDIS_HOST
+      process.env.REDIS_HOST,
+      {
+        db: process.env.REDIS_DB
+          ? process.env.REDIS_DB : undefined
+      }
     ),
     dbCo = coRedis(client);
 
@@ -23,9 +27,9 @@ app.use(async function (ctx) {
   let indexkey;
 
   if (ctx.request.query.index_key) {
-    indexkey = process.env.APP_NAME +':'+ ctx.request.query.index_key;
+    indexkey = process.env.APP_NAME + ':' + ctx.request.query.index_key;
   } else {
-    indexkey = process.env.APP_NAME +':current-content';
+    indexkey = process.env.APP_NAME + ':current-content';
   }
   const index = await dbCo.get(indexkey);
 
