@@ -8,7 +8,7 @@ const redis = require('redis'),
 const app = exports.app = new Koa(),
     client  = redis.createClient(
       process.env.REDIS_PORT,
-      process.env.REDIS_HOST
+      process.env.EMBER_REDIS_HOST
     ),
     dbCo = coRedis(client);
 
