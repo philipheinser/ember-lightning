@@ -12,10 +12,18 @@ echo $1
 if [[ $2 == "staging" ]]
 then
   appname="company-admin_staging"
-else
+fi
+
+if [[ $2 == "demo" ]]
+then
+  appname="company-admin_demo"
+fi
+
+if [[ $2 == "production" ]]
+then
   appname="company-admin"
 fi
 
-(sudo docker build --rm --tag ember-lightning . && sudo docker run -d --restart=always -p 3700:3700 --name ember-lightning --env PORT=3700 --env APP_NAME=$appname --env EMBER_REDIS_HOST=$1 ember-lightning:latest ) 
+(sudo docker build --rm --tag ember-lightning . && sudo docker run -d --restart=always -p 3700:3700 --name ember-lightning --env PORT=3700 --env APP_NAME=$appname --env EMBER_REDIS_HOST=$1 ember-lightning:latest )
 
 exit 0;
